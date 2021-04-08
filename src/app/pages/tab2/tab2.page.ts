@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import { LocalDataService } from 'src/app/services/local-data.service';
+
 @Component({
   selector: 'app-tab2',
   templateUrl: 'tab2.page.html',
@@ -7,6 +9,16 @@ import { Component } from '@angular/core';
 })
 export class Tab2Page {
 
-  constructor() {}
+  constructor(
+    public localData: LocalDataService
+  ) {}
+
+  sendMail() {
+    this.localData.sendMail();
+  }
+
+  open(history) {
+    this.localData.openHistory(history);
+  }
 
 }

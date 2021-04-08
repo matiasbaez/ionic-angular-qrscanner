@@ -23,7 +23,12 @@ export class LocalDataService {
     private iab: InAppBrowser,
     private file: File,
   ) {
+    this.init();
     this.getHistory();
+  }
+
+  async init() {
+    await this.storage.create();
   }
 
   async getHistory() {
