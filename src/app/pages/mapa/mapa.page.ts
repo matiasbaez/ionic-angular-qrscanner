@@ -8,7 +8,7 @@ declare var mapboxgl: any;
   templateUrl: './mapa.page.html',
   styleUrls: ['./mapa.page.scss'],
 })
-export class MapaComponent implements OnInit, AfterViewInit {
+export class MapaPage implements OnInit, AfterViewInit {
 
   lat: number;
   lng: number;
